@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood Saga Restro | Cinematic Dining Experience UAE</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EMBEDDED STYLES -->
+    <style>
+        /* ==========================================
+           BOLLYWOOD SAGA RESTRO - CINEMATIC STYLES
+           ========================================== */
+
+        :root {
+            --primary: #d4af37; /* Rich Gold */
+            --primary-light: #f3e5ab;
+            --primary-dark: #aa8c2c;
+            --bg-deep: #0c0a09; /* Deep Cinematic Charcoal/Black */
+            --bg-card: #181513;
+            --bg-elevated: #24201d;
+            --text-main: #f5f5f5;
+            --text-muted: #a3a3a3;
+            --accent-red: #8b0000; /* Royal Red */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-gold: 0 0 25px rgba(212, 175, 55, 0.2);
+            --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+            --border-gold: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .cinematic-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-dark);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .gold-text {
+            color: var(--primary);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--bg-deep);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            padding: 0.85rem 2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            padding: 0.85rem 2rem;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--bg-deep);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(12, 10, 9, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background: rgba(12, 10, 9, 0.98);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            transition: var(--transition);
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+        }
+
+        .logo-text h1 {
+            font-size: 1.15rem;
+            color: var(--primary);
+            letter-spacing: 1.5px;
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.75rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* HERO SECTION & STATS (Fixed overlap & mobile layout) */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(12, 10, 9, 0.7), rgba(12, 10, 9, 0.9)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            text-align: center;
+            padding: 130px 1rem 60px 1rem;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+            margin-bottom: 3rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.15);
+            border: var(--border-gold);
+            padding: 0.4rem 1.1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            color: var(--primary-light);
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 1.25rem;
+            letter-spacing: 1.5px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            width: 100%;
+            background: rgba(18, 15, 13, 0.95);
+            border-top: var(--border-gold);
+            border-bottom: var(--border-gold);
+            padding: 2rem 0;
+            backdrop-filter: blur(10px);
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 6rem 0;
+            background-color: var(--bg-deep);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .about-img-box {
+            position: relative;
+        }
+
+        .about-img-main {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            border: var(--border-gold);
+        }
+
+        .about-img-float {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid var(--bg-deep);
+            box-shadow: var(--shadow-card);
+            display: none;
+        }
+
+        @media(min-width: 992px) {
+            .about-img-float {
+                display: block;
+            }
+        }
+
+        .section-header-tag {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-top: 1.75rem;
+        }
+
+        .feature-box {
+            background: var(--bg-card);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .feature-box i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.6rem;
+        }
+
+        .feature-box h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            font-family: 'Cinzel', serif;
+        }
+
+        .feature-box p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* MENU SECTION */
+        .menu {
+            padding: 6rem 0;
+            background: linear-gradient(to bottom, var(--bg-deep), var(--bg-card));
+        }
+
+        .section-center-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-center-header h2 {
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-center-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .menu-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .tab-btn {
+            background: var(--bg-elevated);
+            color: var(--text-main);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--primary);
+            color: var(--bg-deep);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-gold);
+            font-weight: 600;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-card {
+            background: var(--bg-elevated);
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-card);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+        }
+
+        .menu-img-container {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .menu-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .menu-card:hover .menu-img-container img {
+            transform: scale(1.08);
+        }
+
+        .menu-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(12, 10, 9, 0.85);
+            color: var(--primary);
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-family: 'Cinzel', serif;
+            border: var(--border-gold);
+            backdrop-filter: blur(5px);
+        }
+
+        .menu-content {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .menu-title-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .menu-title-price h3 {
+            font-size: 1.15rem;
+            font-family: 'Cinzel', serif;
+        }
+
+        .menu-title-price span {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            white-space: nowrap;
+        }
+
+        .menu-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .menu-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 0.85rem;
+        }
+
+        .diet-tag {
+            font-size: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .diet-tag.veg { color: #4ade80; }
+        .diet-tag.non-veg { color: #f87171; }
+
+        .order-btn {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.45rem 1.1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .order-btn:hover {
+            background: var(--primary);
+            color: var(--bg-deep);
+        }
+
+        /* EXPERIENCE / AMBIENCE SECTION */
+        .experience {
+            padding: 6rem 0;
+            background: var(--bg-card);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(12,10,9,0.95), transparent);
+        }
+
+        .gallery-overlay h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* UAE 7 EMIRATES SECTION */
+        .emirates-section {
+            padding: 6rem 0;
+            background: var(--bg-deep);
+        }
+
+        .emirates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.75rem;
+            margin-top: 3rem;
+        }
+
+        .emirate-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 14px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-card);
+        }
+
+        .emirate-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .emirate-card i {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .emirate-card h3 {
+            font-size: 1.2rem;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 0.4rem;
+        }
+
+        .emirate-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* RESERVATION SECTION */
+        .reservation {
+            padding: 6rem 0;
+            background: linear-gradient(rgba(12, 10, 9, 0.9), rgba(12, 10, 9, 0.95)), url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+        }
+
+        .reservation-wrapper {
+            background: rgba(24, 21, 19, 0.95);
+            border: var(--border-gold);
+            border-radius: 16px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            max-width: 850px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+        }
+
+        .reservation-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            color: var(--primary);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            background: var(--bg-elevated);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.85rem 1rem;
+            border-radius: 8px;
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .reservation-btn-box {
+            grid-column: span 2;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* TESTIMONIALS SECTION */
+        .testimonials {
+            padding: 6rem 0;
+            background: var(--bg-deep);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 14px;
+            padding: 2rem;
+            position: relative;
+            box-shadow: var(--shadow-card);
+        }
+
+        .testimonial-card::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            color: rgba(212, 175, 55, 0.08);
+        }
+
+        .stars {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 4px;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-card p {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 1.25rem;
+            font-size: 0.9rem;
+        }
+
+        .client-info h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .client-info span {
+            font-size: 0.75rem;
+            color: var(--primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #080605;
+            border-top: var(--border-gold);
+            padding: 4rem 0 2rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            background: var(--bg-card);
+            border: var(--border-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--primary);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            color: var(--bg-deep);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 4px;
+        }
+
+        .contact-info-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .contact-info-list li {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .contact-info-list i {
+            color: var(--primary);
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.75rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* POPUP MODAL NOTIFICATION */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            padding: 1rem;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-box {
+            background: var(--bg-card);
+            border: var(--border-gold);
+            padding: 2.5rem 2rem;
+            border-radius: 14px;
+            text-align: center;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+            transform: scale(0.9);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: scale(1);
+        }
+
+        .modal-box i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .modal-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .modal-box p {
+            color: var(--text-muted);
+            margin-bottom: 1.75rem;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES FOR MOBILE */
+        @media(max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--bg-deep);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: var(--transition);
+                border-top: var(--border-gold);
+                gap: 1.5rem;
+            }
+            .nav-links.active {
+                left: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .reservation-form {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .reservation-btn-box {
+                grid-column: span 1;
+            }
+            .reservation-wrapper {
+                padding: 2rem 1.25rem;
+            }
+            .hero {
+                padding-top: 110px;
+                min-height: auto;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVBAR -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo-wrapper">
+                <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" stroke="#d4af37" stroke-width="3" fill="#120f0d"/>
+                    <path d="M50 18L58.5 35.5L78 38.5T64 52.5L67.5 72L50 63L32.5 72L36 52.5T22 38.5L41.5 35.5L50 18Z" fill="#d4af37" stroke="#aa8c2c" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="18" fill="#8b0000" stroke="#d4af37" stroke-width="2"/>
+                    <text x="50" y="55" font-family="Cinzel" font-size="14" font-weight="900" fill="#f5f5f5" text-anchor="middle">BS</text>
+                </svg>
+                <div class="logo-text">
+                    <h1>Bollywood Saga</h1>
+                    <span>Restro &amp; Lounge</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#menu">Cinematic Menu</a></li>
+                <li><a href="#experience">Ambience</a></li>
+                <li><a href="#reservation">Reservations</a></li>
+                <li><a href="#emirates">UAE 7 Emirates</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-film"></i> Serving Across All 7 Emirates of UAE
+            </div>
+            <h1>Where Every Dish Tells a <span class="gold-text">Blockbuster</span> Story</h1>
+            <p>Step into the golden era of Indian cinema. Savor royal flavors, exquisite cocktails, and an enchanting dining ambience crafted for true connoisseurs.</p>
+            <div class="hero-btns">
+                <a href="#reservation" class="btn-gold"><i class="fas fa-chair"></i> Reserve a Table</a>
+                <a href="#menu" class="btn-outline"><i class="fas fa-book-open"></i> Explore Menu (AED)</a>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Signature Masterpieces</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>7 Emirates</h3>
+                        <p>Delivery &amp; Dining UAE</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4.9 ★</h3>
+                        <p>Guest Rating</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Authentic Royal Spices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-box">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80" alt="Restaurant Interior" class="about-img-main">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Exquisite Dish" class="about-img-float">
+                </div>
+                <div class="about-content">
+                    <span class="section-header-tag">The Bollywood Saga Legacy</span>
+                    <h2>A Celebration of Flavors, Film &amp; Grandeur</h2>
+                    <p>Founded on a passion for timeless silver-screen magic and legendary culinary arts, <strong>Bollywood Saga Restro</strong> transports you to the glamorous world of classic cinema. Our master chefs curate recipes handed down from royal kitchens, infused with contemporary culinary mastery.</p>
+                    <p>Whether you are joining us for an intimate dinner or a vibrant celebration under our chandeliers, every moment here is scripted for perfection.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Royal Recipes</h4>
+                            <p>Authentic spices sourced directly from native estates.</p>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-glass-cheers"></i>
+                            <h4>Cinematic Cocktails</h4>
+                            <p>Mixology masterpieces inspired by iconic movie hits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-center-header">
+                <span class="section-header-tag">Gastronomic Masterpieces</span>
+                <h2>The Cinematic Menu (AED)</h2>
+                <p>Explore our curated selection of starters, royal mains, legendary grill platters, and silver-screen elixirs priced in UAE Dirhams.</p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-filter="all">All Specials</button>
+                <button class="tab-btn" data-filter="starters">Starters &amp; Kebabs</button>
+                <button class="tab-btn" data-filter="mains">Royal Mains</button>
+                <button class="tab-btn" data-filter="breads">Breads &amp; Rice</button>
+                <button class="tab-btn" data-filter="drinks">Screen Elixirs</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Item 1 -->
+                <div class="menu-card" data-category="starters">
+                    <div class="menu-img-container">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Galouti Kebab">
+                        <span class="menu-badge">Chef's Pick</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Sholay Galouti Kebab</h3>
+                            <span>AED 65</span>
+                        </div>
+                        <p class="menu-desc">Meltingly soft lamb kebabs infused with secret aromatic spices, served with saffron taftan bread.</p>
+                        <div class="menu-footer">
+                            <span class="diet-tag non-veg"><i class="fas fa-circle"></i> Non-Veg</span>
+                            <button class="order-btn" onclick="openOrderModal('Sholay Galouti Kebab', 'AED 65')">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card" data-category="mains">
+                    <div class="menu-img-container">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80" alt="Butter Chicken">
+                        <span class="menu-badge">Blockbuster</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Mughal-E-Azam Butter Chicken</h3>
+                            <span>AED 85</span>
+                        </div>
+                        <p class="menu-desc">Tender tandoori chicken simmered in a velvety, rich tomato and fenugreek butter gravy.</p>
+                        <div class="menu-footer">
+                            <span class="diet-tag non-veg"><i class="fas fa-circle"></i> Non-Veg</span>
+                            <button class="order-btn" onclick="openOrderModal('Mughal-E-Azam Butter Chicken', 'AED 85')">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card" data-category="starters">
+                    <div class="menu-img-container">
+                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka">
+                        <span class="menu-badge">Signature</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Devdas Paneer Tikka</h3>
+                            <span>AED 55</span>
+                        </div>
+                        <p class="menu-desc">Cottage cheese marinated in Kashmiri chili and hung curd, charred to perfection in a clay oven.</p>
+                        <div class="menu-footer">
+                            <span class="diet-tag veg"><i class="fas fa-circle"></i> Veg</span>
+                            <button class="order-btn" onclick="openOrderModal('Devdas Paneer Tikka', 'AED 55')">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card" data-category="mains">
+                    <div class="menu-img-container">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Hyderabadi Biryani">
+                        <span class="menu-badge">Royal Heirloom</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Baadshah Dum Biryani</h3>
+                            <span>AED 75</span>
+                        </div>
+                        <p class="menu-desc">Long-grain basmati rice cooked with succulent pieces of meat/vegetables, sealed in a dough pot with aromatic spices.</p>
+                        <div class="menu-footer">
+                            <span class="diet-tag non-veg"><i class="fas fa-circle"></i> Non-Veg / Veg</span>
+                            <button class="order-btn" onclick="openOrderModal('Baadshah Dum Biryani', 'AED 75')">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card" data-category="breads">
+                    <div class="menu-img-container">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80" alt="Assorted Breads">
+                        <span class="menu-badge">Freshly Baked</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Royal Basket of Breads</h3>
+                            <span>AED 35</span>
+                        </div>
+                        <p class="menu-desc">Selection of butter garlic naan, stuffed kulcha, and roomali roti brushed with organic ghee.</p>
+                        <div class="menu-footer">
+                            <span class="diet-tag veg"><i class="fas fa-circle"></i> Veg</span>
+                            <button class="order-btn" onclick="openOrderModal('Royal Basket of Breads', 'AED 35')">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card" data-category="drinks">
+                    <div class="menu-img-container">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Cocktail Mocktail">
+                        <span class="menu-badge">Elixir</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-price">
+                            <h3>Dilwale Mocktail / Cocktail</h3>
+                            <span>AED 45</span>
+                        </div>
+                        <p class="menu-desc">A refreshing blend of passion fruit, fresh mint, exotic spices, and sparkling botanical water.</p>
+                        <div class="menu-footer">
+                            <span class="diet-tag veg"><i class="fas fa-circle"></i> Alcohol Optional</span>
+                            <button class="order-btn" onclick="openOrderModal('Dilwale Mocktail / Cocktail', 'AED 45')">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMBIENCE & GALLERY SECTION -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-center-header">
+                <span class="section-header-tag">Silver Screen Interiors</span>
+                <h2>Experience The Ambience</h2>
+                <p>Designed with vintage film posters, ambient gold lighting, and plush velvet seating to give you an authentic red-carpet dining experience.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Main Dining Hall">
+                    <div class="gallery-overlay">
+                        <h4>The Grand Ballroom</h4>
+                        <p>Majestic chandeliers &amp; vintage cinematic portraits</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" alt="Bar Lounge">
+                    <div class="gallery-overlay">
+                        <h4>Retro Lounge &amp; Bar</h4>
+                        <p>Craft cocktails &amp; soulful retro melodies</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=800&q=80" alt="Private Dining">
+                    <div class="gallery-overlay">
+                        <h4>Director's Booth</h4>
+                        <p>Exclusive private dining for special celebrations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UAE 7 EMIRATES NETWORK SECTION -->
+    <section class="emirates-section" id="emirates">
+        <div class="container">
+            <div class="section-center-header">
+                <span class="section-header-tag">Nationwide Reach</span>
+                <h2>Proudly Serving All 7 Emirates of UAE</h2>
+                <p>From flagship dining rooms to rapid delivery across the UAE, experience Bollywood Saga everywhere you go.</p>
+            </div>
+
+            <div class="emirates-grid">
+                <div class="emirate-card">
+                    <i class="fas fa-city"></i>
+                    <h3>Dubai</h3>
+                    <p>Downtown &amp; Marina Express Delivery &amp; VIP Lounge</p>
+                </div>
+                <div class="emirate-card">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Abu Dhabi</h3>
+                    <p>Corniche Fine Dining &amp; Capital Catering</p>
+                </div>
+                <div class="emirate-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Sharjah</h3>
+                    <p>Al Majaz Waterfront Delivery &amp; Family Restaurant</p>
+                </div>
+                <div class="emirate-card">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h3>Ras Al Khaimah</h3>
+                    <p>Al Qawasim Corniche Flagship Restro &amp; Lounge</p>
+                </div>
+                <div class="emirate-card">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Ajman</h3>
+                    <p>Corniche Fast Delivery Services</p>
+                </div>
+                <div class="emirate-card">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Fujairah</h3>
+                    <p>City Centre Dine-In &amp; Coastal Delivery</p>
+                </div>
+                <div class="emirate-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Umm Al Quwain</h3>
+                    <p>Direct Express Delivery Across All Neighborhoods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVATION SECTION -->
+    <section class="reservation" id="reservation">
+        <div class="container">
+            <div class="reservation-wrapper">
+                <div class="section-center-header" style="margin-bottom: 0;">
+                    <span class="section-header-tag">Book Your Red Carpet Table</span>
+                    <h2>Table Reservation &amp; Delivery</h2>
+                    <p>Secure your spot or book home delivery across any of the 7 UAE Emirates in AED.</p>
+                </div>
+
+                <form class="reservation-form" id="reservationForm">
+                    <div class="form-group">
+                        <label for="resName">Full Name</label>
+                        <input type="text" id="resName" placeholder="Anish Sood" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resPhone">Phone Number</label>
+                        <input type="tel" id="resPhone" placeholder="+971 50 123 4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resEmirate">Select Emirate</label>
+                        <select id="resEmirate" required>
+                            <option value="">Choose Emirate</option>
+                            <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Abu Dhabi">Abu Dhabi</option>
+                            <option value="Sharjah">Sharjah</option>
+                            <option value="Ajman">Ajman</option>
+                            <option value="Fujairah">Fujairah</option>
+                            <option value="Umm Al Quwain">Umm Al Quwain</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="resService">Service Type</label>
+                        <select id="resService" required>
+                            <option value="Dine-In Table Reservation">Dine-In Table Reservation</option>
+                            <option value="Home Delivery">Home Delivery (AED)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="resDate">Date</label>
+                        <input type="date" id="resDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resTime">Time Slot</label>
+                        <select id="resTime" required>
+                            <option value="">Select Time</option>
+                            <option value="12:30 PM">12:30 PM (Lunch)</option>
+                            <option value="02:00 PM">02:00 PM (Lunch)</option>
+                            <option value="07:00 PM">07:00 PM (Dinner)</option>
+                            <option value="08:30 PM">08:30 PM (Dinner)</option>
+                            <option value="10:00 PM">10:00 PM (Late Night)</option>
+                        </select>
+                    </div>
+                    <div class="reservation-btn-box">
+                        <button type="submit" class="btn-gold"><i class="fas fa-check-circle"></i> Submit Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-center-header">
+                <span class="section-header-tag">Guest Applauses</span>
+                <h2>What Our Patrons Say</h2>
+                <p>Read heartfelt reviews from our esteemed diners and film enthusiasts across the UAE.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"An absolute masterpiece! The butter chicken transported me straight back to Delhi, and the movie posters on the walls made the dinner feel like a star-studded gala."</p>
+                    <div class="client-info">
+                        <h4>Vikram Malhotra</h4>
+                        <span>Food &amp; Film Critic (Dubai)</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"We celebrated our anniversary at the Director's Booth in RAK. The service was impeccable, and the cocktails were as theatrical as they were delicious."</p>
+                    <div class="client-info">
+                        <h4>Priya &amp; Rohan</h4>
+                        <span>Regular Patrons (Ras Al Khaimah)</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"From the royal ambiance to the phenomenal Galouti Kebabs, Bollywood Saga Restro delivers 5-star cinematic dining in every single bite."</p>
+                    <div class="client-info">
+                        <h4>Sameer Khan</h4>
+                        <span>Entrepreneur (Abu Dhabi)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-wrapper" style="margin-bottom: 1rem;">
+                        <svg class="logo-icon" style="width:36px;height:36px;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="46" stroke="#d4af37" stroke-width="3" fill="#120f0d"/>
+                            <path d="M50 18L58.5 35.5L78 38.5T64 52.5L67.5 72L50 63L32.5 72L36 52.5T22 38.5L41.5 35.5L50 18Z" fill="#d4af37" stroke="#aa8c2c" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="18" fill="#8b0000" stroke="#d4af37" stroke-width="2"/>
+                        </svg>
+                        <div class="logo-text">
+                            <h1 style="font-size:0.95rem;">Bollywood Saga</h1>
+                            <span>Restro &amp; Lounge</span>
+                        </div>
+                    </div>
+                    <p>Where the grandeur of Indian cinema meets world-class gastronomy. Serving all 7 Emirates in AED.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#menu">Cinematic Menu (AED)</a></li>
+                        <li><a href="#emirates">UAE 7 Emirates</a></li>
+                        <li><a href="#reservation">Table Reservation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <p><strong>Monday – Thursday:</strong><br>12:00 PM – 11:30 PM</p>
+                    <p><strong>Friday – Sunday:</strong><br>12:00 PM – 01:00 AM (Late Night)</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info-list">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Al Qawasim Corniche, RAK / Delivery across UAE</span></li>
+                        <li><i class="fas fa-phone-alt"></i> <span>+971 7 234 5678</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>concierge@bollywoodsagarestro.com</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bollywood Saga Restro &amp; Lounge. All Rights Reserved. Crafted with cinematic elegance in UAE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <i class="fas fa-check-circle" id="modalIcon"></i>
+            <h3 id="modalTitle">Success!</h3>
+            <p id="modalMessage">Your request has been successfully received. Our concierge will contact you shortly.</p>
+            <button class="btn-gold" onclick="closeModal()">Close Window</button>
+        </div>
+    </div>
+
+    <!-- EMBEDDED JAVASCRIPT -->
+    <script>
+        /* ==========================================
+           BOLLYWOOD SAGA RESTRO - INTERACTIVE JS
+           ========================================== */
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Navbar Scroll Effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile Menu Toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = hamburger.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    hamburger.querySelector('i').classList.add('fa-bars');
+                    hamburger.querySelector('i').classList.remove('fa-times');
+                });
+            });
+
+            // Menu Filtering System
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const menuCards = document.querySelectorAll('.menu-card');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    menuCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Modal Elements & Handlers
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const modalIcon = document.getElementById('modalIcon');
+
+            window.openOrderModal = function(itemName, itemPrice) {
+                modalIcon.className = "fas fa-utensils";
+                modalTitle.innerText = "Order Placed!";
+                modalMessage.innerHTML = `You have selected <strong>${itemName}</strong> (${itemPrice}). Our culinary team is preparing your blockbuster order for delivery across the UAE!`;
+                modalOverlay.classList.add('active');
+            };
+
+            window.closeModal = function() {
+                modalOverlay.classList.remove('active');
+            };
+
+            // Reservation / Booking Form Submission
+            const reservationForm = document.getElementById('reservationForm');
+            if (reservationForm) {
+                reservationForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('resName').value;
+                    const emirate = document.getElementById('resEmirate').value;
+                    const service = document.getElementById('resService').value;
+                    const date = document.getElementById('resDate').value;
+                    const time = document.getElementById('resTime').value;
+
+                    modalIcon.className = "fas fa-concierge-bell";
+                    modalTitle.innerText = "Booking Confirmed!";
+                    modalMessage.innerHTML = `Thank you, <strong>${name}</strong>! Your request for <strong>${service}</strong> in <strong>${emirate}</strong> has been successfully booked for <strong>${date} at ${time}</strong>.`;
+                    modalOverlay.classList.add('active');
+                    reservationForm.reset();
+                });
+            }
+
+            // Close modal on outside click
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    closeModal();
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
